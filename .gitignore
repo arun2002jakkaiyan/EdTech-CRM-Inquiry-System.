@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Vite build
+dist/
+dist-ssr/
+*.local
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+bin/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.production
