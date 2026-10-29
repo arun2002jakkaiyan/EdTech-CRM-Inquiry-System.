@@ -104,7 +104,6 @@ CREATE TABLE IF NOT EXISTS admins (
     updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
--- Public Inquiries table
 CREATE TABLE IF NOT EXISTS inquiries (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_type VARCHAR(50) NOT NULL CHECK (user_type IN ('Parent', 'Student', 'School')),
@@ -119,7 +118,6 @@ CREATE TABLE IF NOT EXISTS inquiries (
     updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
--- Performance Indexes
 CREATE INDEX IF NOT EXISTS idx_inquiries_category ON inquiries(category);
 CREATE INDEX IF NOT EXISTS idx_inquiries_user_type ON inquiries(user_type);
 CREATE INDEX IF NOT EXISTS idx_inquiries_status ON inquiries(status);
@@ -176,7 +174,6 @@ The repository includes a ready-to-run Java server that boots in under 1 second 
 ```powershell
 cd backend
 .\run-java.bat
-# Or using powershell:
 .\run-java.ps1
 ```
 
@@ -317,3 +314,5 @@ curl http://localhost:5000/api/inquiries?category=Scholarship \
 - **Database Used**: Supabase (PostgreSQL) with `schema.sql`
 - **Authentication**: Custom JWT built from scratch in backend without Supabase Auth
 - **Status**: Tested, verified, and complete with all mandatory filters and search criteria.
+#   E d T e c h - C R M - I n q u i r y - S y s t e m .  
+ 
